@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick Transportes | Segurança e Rapidez</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#1e3a8a', // Dark blue for trust
+                            orange: '#f97316', // Orange for speed/action
+                            light: '#f3f4f6'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Smooth scrolling */
+        html { scroll-behavior: smooth; }
+        
+        /* Floating WhatsApp Button Animation */
+        @keyframes pulse-soft {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .whatsapp-float {
+            animation: pulse-soft 2s infinite;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-brand-light">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md fixed w-full z-50 top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <i class="fas fa-truck-moving text-brand-orange text-3xl mr-2"></i>
+                    <span class="font-bold text-2xl text-brand-blue tracking-tight">Rick<span class="text-brand-orange">Transportes</span></span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#servicos" class="text-gray-600 hover:text-brand-blue font-medium transition">Serviços</a>
+                    <a href="#vantagens" class="text-gray-600 hover:text-brand-blue font-medium transition">Porquê Nós?</a>
+                    <a href="#contactos" class="bg-brand-orange hover:bg-orange-600 text-white px-6 py-2 rounded-full font-bold transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">Pedir Orçamento</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="flex items-center md:hidden">
+                    <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="text-gray-600 hover:text-brand-blue focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <a href="#servicos" class="block px-4 py-3 text-gray-600 hover:bg-gray-50">Serviços</a>
+            <a href="#vantagens" class="block px-4 py-3 text-gray-600 hover:bg-gray-50">Porquê Nós?</a>
+            <a href="#contactos" class="block px-4 py-3 text-brand-orange font-bold hover:bg-gray-50">Pedir Orçamento</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-28 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
+        <!-- Background decorative elements -->
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-brand-blue opacity-95"></div>
+            <!-- Standard placeholder logic using CSS gradients and generic patterns -->
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-800 to-brand-blue opacity-50"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center lg:text-left flex flex-col lg:flex-row items-center">
+            <div class="lg:w-1/2 lg:pr-10">
+                <span class="inline-block py-1 px-3 rounded-full bg-blue-800 text-brand-orange text-sm font-semibold tracking-wider mb-4 border border-brand-orange/30">LOGÍSTICA DE EXCELÊNCIA</span>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
+                    A sua carga no destino certo, <span class="text-brand-orange text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-yellow-400">no tempo exato.</span>
+                </h1>
+                <p class="text-lg sm:text-xl text-gray-300 mb-8 max-w-2xl mx-auto lg:mx-0">
+                    Soluções de transporte de mercadorias, mudanças e entregas expressas com total segurança e monitorização em tempo real.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contactos" class="bg-brand-orange hover:bg-orange-600 text-white px-8 py-4 rounded-full font-bold text-lg transition shadow-[0_0_15px_rgba(249,115,22,0.4)] flex items-center justify-center">
+                        <i class="fab fa-whatsapp mr-2 text-xl"></i> Orçamento Rápido
+                    </a>
+                    <a href="#servicos" class="bg-transparent border-2 border-white hover:bg-white hover:text-brand-blue text-white px-8 py-4 rounded-full font-bold text-lg transition flex items-center justify-center">
+                        Ver Serviços
+                    </a>
+                </div>
+            </div>
+            
+            <div class="lg:w-1/2 mt-12 lg:mt-0 relative hidden md:block">
+                <!-- Abstract Representation of a Truck/Logistics instead of loading external images -->
+                <div class="w-full h-80 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-8 flex flex-col justify-center items-center shadow-2xl transform rotate-2 hover:rotate-0 transition duration-500">
+                    <i class="fas fa-box-open text-brand-orange text-7xl mb-4"></i>
+                    <h3 class="text-2xl font-bold text-white mb-2">Transporte Seguro</h3>
+                    <p class="text-gray-300 text-center">Garantimos a integridade das suas mercadorias desde a recolha até à entrega.</p>
+                    
+                    <!-- Fake progress bar -->
+                    <div class="w-full bg-gray-700 rounded-full h-2.5 mt-6">
+                      <div class="bg-brand-orange h-2.5 rounded-full w-[85%] relative">
+                          <i class="fas fa-truck absolute -right-2 -top-2 text-white bg-brand-blue rounded-full p-1 text-xs"></i>
+                      </div>
+                    </div>
+                    <div class="flex justify-between w-full mt-2 text-xs text-gray-400 font-medium">
+                        <span>Recolha</span>
+                        <span>Em Trânsito</span>
+                        <span class="text-brand-orange">Entrega Hoje</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-white py-10 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-3xl font-extrabold text-brand-blue mb-1">+1000</div>
+                    <div class="text-sm text-gray-500 font-medium uppercase tracking-wide">Cargas Entregues</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-extrabold text-brand-blue mb-1">99%</div>
+                    <div class="text-sm text-gray-500 font-medium uppercase tracking-wide">Entregas no Prazo</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-extrabold text-brand-blue mb-1">24/7</div>
+                    <div class="text-sm text-gray-500 font-medium uppercase tracking-wide">Apoio ao Cliente</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-extrabold text-brand-blue mb-1">5 <i class="fas fa-star text-brand-orange text-xl"></i></div>
+                    <div class="text-sm text-gray-500 font-medium uppercase tracking-wide">Avaliação Média</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicos" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">Nossas Soluções de Transporte</h2>
+                <p class="mt-4 text-xl text-gray-600">Adaptamo-nos às suas necessidades, seja para particulares ou grandes operações empresariais.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition duration-300 border border-gray-100 group">
+                    <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-blue transition">
+                        <i class="fas fa-dolly text-2xl text-brand-blue group-hover:text-white transition"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Mudanças Residenciais</h3>
+                    <p class="text-gray-600 mb-4">Embalamento, desmontagem e transporte cuidadoso dos seus bens. A sua nova casa à distância de uma viagem tranquila.</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition duration-300 border border-gray-100 group relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-brand-orange text-white text-xs font-bold px-3 py-1 rounded-bl-lg">MAIS PROCURADO</div>
+                    <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-blue transition">
+                        <i class="fas fa-pallet text-2xl text-brand-blue group-hover:text-white transition"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Carga Comercial (B2B)</h3>
+                    <p class="text-gray-600 mb-4">Transporte de paletes, distribuição de mercadorias e soluções logísticas para otimizar a cadeia de abastecimento da sua empresa.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition duration-300 border border-gray-100 group">
+                    <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-blue transition">
+                        <i class="fas fa-shipping-fast text-2xl text-brand-blue group-hover:text-white transition"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Entregas Expressas</h3>
+                    <p class="text-gray-600 mb-4">Tem urgência? Serviço porta-a-porta dedicado para encomendas críticas que precisam de chegar no mesmo dia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section id="vantagens" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl mb-6">Porquê confiar a sua carga à Rick Transportes?</h2>
+                    <p class="text-lg text-gray-600 mb-8">Não movemos apenas caixas, movemos o seu negócio e a sua vida. O nosso compromisso é com a sua tranquilidade.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-brand-orange text-white">
+                                    <i class="fas fa-shield-alt text-xl"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg leading-6 font-bold text-gray-900">Seguro Total Incluído</h4>
+                                <p class="mt-2 text-base text-gray-600">Todas as cargas viajam com apólice de seguro contra danos e furtos. Risco zero para si.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-brand-orange text-white">
+                                    <i class="fas fa-map-marked-alt text-xl"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg leading-6 font-bold text-gray-900">Rastreabilidade</h4>
+                                <p class="mt-2 text-base text-gray-600">Saiba exatamente onde está a sua mercadoria com os nossos veículos equipados com GPS em tempo real.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-brand-orange text-white">
+                                    <i class="fas fa-user-tie text-xl"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg leading-6 font-bold text-gray-900">Equipa Profissional</h4>
+                                <p class="mt-2 text-base text-gray-600">Motoristas e ajudantes experientes, fardados e treinados para manusear itens frágeis com o máximo cuidado.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 w-full">
+                    <div class="bg-gray-100 rounded-3xl p-8 relative">
+                        <div class="absolute -top-4 -left-4 w-20 h-20 bg-brand-orange rounded-full opacity-20 blur-xl"></div>
+                        <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-brand-blue rounded-full opacity-10 blur-xl"></div>
+                        
+                        <!-- Testimonial Card -->
+                        <div class="bg-white p-6 rounded-2xl shadow-lg relative z-10 mb-6 border-l-4 border-brand-orange">
+                            <div class="flex text-brand-orange mb-2">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="text-gray-700 italic mb-4">"Mudámos o nosso escritório de Lisboa para o Porto com a Rick Transportes. Tudo chegou intacto e o motorista foi extremamente prestável. Recomendo vivamente!"</p>
+                            <div class="font-bold text-gray-900">- João Silva, CEO TechSolutions</div>
+                        </div>
+
+                        <!-- Testimonial Card -->
+                        <div class="bg-white p-6 rounded-2xl shadow-lg relative z-10 border-l-4 border-brand-blue">
+                            <div class="flex text-brand-orange mb-2">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="text-gray-700 italic mb-4">"Precisava de enviar paletes com urgência e resolveram-me o problema em 2 horas. Serviço impecável e preço justo."</p>
+                            <div class="font-bold text-gray-900">- Maria Fernandes, Comerciante</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA & Contact Section -->
+    <section id="contactos" class="bg-brand-blue py-20 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <svg class="h-full w-full" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+            </svg>
+        </div>
+        
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h2 class="text-3xl font-extrabold text-white sm:text-4xl mb-6">Pronto para arrancar?</h2>
+            <p class="text-xl text-blue-100 mb-10">Fale connosco agora mesmo e receba um orçamento gratuito em menos de 15 minutos.</p>
+            
+            <div class="bg-white rounded-3xl p-8 md:p-12 shadow-2xl max-w-2xl mx-auto transform -translate-y-2">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">Solicitar Cotação</h3>
+                
+                <form class="space-y-4 text-left" onsubmit="event.preventDefault(); alert('Este é um modelo. Na versão final, isto enviaria um email ou direcionaria para o WhatsApp.');">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Nome / Empresa</label>
+                            <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Telefone / WhatsApp</label>
+                            <input type="tel" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition" required>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Local de Origem</label>
+                            <input type="text" placeholder="Ex: Lisboa" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Local de Destino</label>
+                            <input type="text" placeholder="Ex: Faro" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition" required>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Tipo de Carga / Detalhes</label>
+                        <textarea rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition" placeholder="O que vamos transportar?"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-brand-orange hover:bg-orange-600 text-white font-bold py-3 px-4 rounded-lg transition duration-300 shadow-md">
+                        Obter Preço Agora
+                    </button>
+                    
+                    <div class="mt-4 text-center text-sm text-gray-500">
+                        Preferes falar já? <a href="https://wa.me/351999999999" target="_blank" class="text-green-600 font-bold hover:underline"><i class="fab fa-whatsapp mr-1"></i>Chama no WhatsApp</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-truck-moving text-brand-orange text-2xl mr-2"></i>
+                        <span class="font-bold text-xl text-white tracking-tight">Rick<span class="text-brand-orange">Transportes</span></span>
+                    </div>
+                    <p class="text-sm text-gray-400 mb-4">A sua parceira de confiança para transportes e logística. Segurança, rapidez e profissionalismo em cada quilómetro.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Contactos Diretos</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-center"><i class="fas fa-phone-alt w-6 text-brand-orange"></i> +351 999 999 999</li>
+                        <li class="flex items-center"><i class="fas fa-envelope w-6 text-brand-orange"></i> geral@ricktransportes.pt</li>
+                        <li class="flex items-center"><i class="fas fa-map-marker-alt w-6 text-brand-orange"></i> Sede: Zona Industrial, Armazém 4, PT</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Redes Sociais</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="h-10 w-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-brand-blue hover:text-white transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="h-10 w-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gradient-to-tr hover:from-yellow-400 hover:to-pink-600 hover:text-white transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="h-10 w-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 hover:text-white transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-sm text-center text-gray-500">
+                &copy; 2026 Rick Transportes. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/351999999999" target="_blank" class="whatsapp-float fixed bottom-6 right-6 bg-green-500 text-white h-16 w-16 rounded-full flex items-center justify-center text-3xl shadow-[0_4px_14px_0_rgba(34,197,94,0.39)] hover:bg-green-600 transition z-50">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+</body>
+</html>
+
